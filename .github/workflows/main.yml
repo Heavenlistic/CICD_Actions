@@ -1,5 +1,10 @@
 name: Hprofile Actions
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: actapp
