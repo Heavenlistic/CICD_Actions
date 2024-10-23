@@ -92,3 +92,7 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest
           wait-for-service-stability: true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ env.AWS_REGION }}
